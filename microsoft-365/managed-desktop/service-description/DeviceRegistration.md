@@ -1,0 +1,92 @@
+---
+title: Register devices in Microsoft Managed Desktop
+description: Register devices so they can be managed by Microsoft Managed Desktop
+keywords: 
+ms.prod: w10
+ms.mktglfcycl: 
+ms.sitesec: 
+ms.pagetype: 
+author: jaimeo
+ms.author: jaimeo
+ms.localizationpriority: medium
+---
+
+# Register devices in Microsoft Managed Desktop
+
+[//]: # (This draft version topic focuses on the self-service option--how different is the partner thing?)
+
+Managed Desktop can work with brand-new devices or you re-use devices you might already have (which will re-image them). You can register devices by using the Managed Desktop Admin Center or save time and gain flexibility by using an API.
+
+## Prepare to register devices
+
+If you haven't already obtained the devices you want to use, see [Order devices LINK] for options to get some. In either case, you should check {device list LINK} to ensure that they meet the appropriate system requirements.
+
+Whether you're working with completely new devices or re-using existing ones, to register them with Microsoft Managed Desktop, you'll need to prepare a comma-delimited (CSV) file. This file should include the following information for each device:
+
+[//]: # (I see a mention in the Word outline of this CSV file being different depending on the "actor"--can you clarify?)
+
+- Device manufacturer (example: Microsoft) {how picky is this? Does "Microsoft" work as well as "Microsoft Corporation"? Does it have to match items in the registry or msinfo32 or something?}
+- Device model (example: Surface Laptop)
+- Device serial number
+- Hardware hash
+
+To obtain the hardware hash for each device, follow these steps:
+
+1. {something}
+2. {something else}
+
+>[!NOTE]
+>For your convenience, you can download a template for this CSV file from {deeplink into product}.
+
+Your file needs to include the **exact same column headings** as the sample one (Manufacturer, Model, etc.), but your own data for the other rows. If you use the template, open it in a text editing tool such as Notepad, and consider leaving all the data in row 1 alone, only entering data in rows 2 and below. 
+    
+  ```
+ Manufacturer,Model,Serial Number,Hardware Hash
+  Microsoft Corporation,Surface Laptop,016520771357,eidkaofjeioaofjfoieoajfoiejofiaoiojeifjojew
+  
+  
+  ```
+[//]: # (do the devices themselves need any kind of prep or settings? Firewall things? Diag data turned on? Or do they only need to be powered on and on the network? Any other network settings, domain, NAT, or whatever?)
+
+## Register devices by by using the Admin Center
+
+From the {main Admin Center?}, select {something} to open the Microsoft Managed Desktop panel. Select **+ Register devices**; the fly-in opens:
+
+{screenshot to reassure user they're in the right place}
+
+>[!IMPORTANT]
+>Registering any existing devices with Managed Desktop will completely re-image them; make sure you've backed up any important data prior to starting the registration process.
+
+Follow these steps:
+
+1. In **File upload**, provide a path to the CSV file you created previously.
+2. Optionally, you can add an **Order ID** or **Purchase ID** for your own tracking purposes. There are no format requirements for these values. {possibly mention where one can view/sort/search those later? Autopilot uses them.}
+3. Select **Register devices**.
+
+[//]: # (Can we offer any kind of estimate of how long to expect this to take?)
+
+You can monitor the progress of device registration on the main **Microsoft Managed Desktop - Devices** page. Possible states reported there include:
+
+[//]: # (possible screenshot highlighting where the status is shown)
+[//]: # (maybe better as a table so we can explain what the states mean)
+
+- Registration pending
+- Device not found
+- {MORE}
+
+
+## Register devices by using an API
+
+{what it's good for - more for repeatability/flexibility rather than # of devices}
+{what language or framework or whatever is it?}
+{where to obtain}
+
+
+
+## Troubleshooting
+
+[//]: # (kinda depends on how much ends up being needed here. If very little, could go in the same section as table listing progress/outcomes. If more, its own section here. If a lot more, we can make a separate topic for it)
+
+
+
+
