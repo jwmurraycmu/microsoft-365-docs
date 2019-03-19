@@ -23,17 +23,39 @@ Whether you're working with completely new devices or re-using existing ones, to
 >Note: This format is for self-service only. Partners have a different format documented [Somewhere else LINK].
 
 [//]: # (I see a mention in the Word outline of this CSV file being different depending on the "actor"--can you clarify?)
-(Pretty different - the fields for Manufacturer, Model, and Serial have to be EXACT matches, and Hardware Hash is not required at all.)
+[//]: # (Pretty different - the fields for Manufacturer, Model, and Serial have to be EXACT matches, and Hardware Hash is not required at all.)
 
-- Device manufacturer (example: Microsoft) {how picky is this? Does "Microsoft" work as well as "Microsoft Corporation"? Does it have to match items in the registry or msinfo32 or something?}
+These values are used for display purposes, and don't need to match properties from the device exactly.
+- Device manufacturer (example: Microsoft) 
 - Device model (example: Surface Laptop)
 - Device serial number
+
+The Hardware hash must be an exact match.
 - Hardware hash
 
-To obtain the hardware hash for each device, follow these steps:
+To obtain the hardware hash you can ask for help from your OEM or Partner, or follow these steps for each device:
 
-1. {something}
-2. {something else}
+1. Open an admin PowerShell window
+2. Install-Script -Name Get-WindowsAutoPilotInfo
+3. Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+4. .\Get-WindowsAutoPilotInfo -OutputFile <path>\hardwarehash.csv
+
+These steps can also be done on a brand new device before going through OOBE for the first time by following these steps:
+
+1. On a different device, insert a USB drive
+2. Launch an admin PowerShell window
+3. Save-Script -Name Get-WindowsAutoPilotInfo -Path <pathToUsb>
+4. Turn on the target device, and do not progress OOBE.
+    >Failure to do so will result in needing to reset or reimage the device.
+5. Insert the USB
+6. Hit Shift+F10 
+7. type powershell
+8. cd <pathToUsb>
+9. Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+10. .\Get-WindowsAutoPilotInfo -OutputFile <path>\hardwarehash.csv
+11. shutdown -s -t 0
+
+>Do not power on the target device again until Registration is complete. 
 
 >[!NOTE]
 >For your convenience, you can download a template for this CSV file from {deeplink into product}.
