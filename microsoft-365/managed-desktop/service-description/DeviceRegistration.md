@@ -1,11 +1,7 @@
 ---
 title: Register devices in Microsoft Managed Desktop
 description: Register devices so they can be managed by Microsoft Managed Desktop
-keywords: 
 ms.prod: w10
-ms.mktglfcycl: 
-ms.sitesec: 
-ms.pagetype: 
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
@@ -14,6 +10,7 @@ ms.localizationpriority: medium
 # Register devices in Microsoft Managed Desktop
 
 [//]: # (This draft version topic focuses on the self-service option--how different is the partner thing?)
+>Note: This article describes the steps for you to register devices on your own. The process for Partners is documented [Somewhere else LINK].
 
 Managed Desktop can work with brand-new devices or you re-use devices you might already have (which will re-image them). You can register devices by using the Managed Desktop Admin Center or save time and gain flexibility by using an API.
 
@@ -23,7 +20,10 @@ If you haven't already obtained the devices you want to use, see [Order devices 
 
 Whether you're working with completely new devices or re-using existing ones, to register them with Microsoft Managed Desktop, you'll need to prepare a comma-delimited (CSV) file. This file should include the following information for each device:
 
+>Note: This format is for self-service only. Partners have a different format documented [Somewhere else LINK].
+
 [//]: # (I see a mention in the Word outline of this CSV file being different depending on the "actor"--can you clarify?)
+(Pretty different - the fields for Manufacturer, Model, and Serial have to be EXACT matches, and Hardware Hash is not required at all.)
 
 - Device manufacturer (example: Microsoft) {how picky is this? Does "Microsoft" work as well as "Microsoft Corporation"? Does it have to match items in the registry or msinfo32 or something?}
 - Device model (example: Surface Laptop)
