@@ -201,6 +201,26 @@ You can monitor the progress of device registration on the main **Microsoft Mana
 
 ## Partner Process
 
+### Preparing for Registration 
+Before completing registration for a customer, you must first establish a relationship with them on Partner Center [Partner Center LINK].
 
+To complete registration for your customer, you must create a CSV file.
+>Note: This format is for Partners only. Customers have a different format for self-service documented [Somewhere else LINK].
 
+>[!Important]These values must match the manufacturer values from SMBIOS exactly
+- Device manufacturer (example: Microsoft) 
+- Device model (example: Surface Laptop)
+- Device serial number
 
+## Register devices by by using the Admin Center
+Registering by the UI is the same as for self-service, except getting to the portal is slightly different. Instead of using aka.ms/mmdportal, they must instead:
+1. Navigate to PArtner Center
+2. Click Customers
+3. Click the customer they want to manage
+4. Click Service Administration
+5. Click Intune
+6. Search "mmd" in the top search box of the Azure portal
+7. click Devices and it's the same from here.
+
+## Register devices by using an API
+Registering by API is the same as self-service, except that the Hardware Hash property of the Device collection is optional as described in the CSV section. 
