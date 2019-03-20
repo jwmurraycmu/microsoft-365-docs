@@ -80,14 +80,16 @@ From the MMD Admin Portal [aka.ms/mmdportal LINK], select Devices in the left na
 {screenshot to reassure user they're in the right place}
 
 >[!IMPORTANT]
+
 [//]: # (Sadly this isn't true. We can remove this note - but leaving it now until we have a chance to chat about it.)
+
 >Registering any existing devices with Managed Desktop will completely re-image them; make sure you've backed up any important data prior to starting the registration process.
 
 
 Follow these steps:
 
 1. In **File upload**, provide a path to the CSV file you created previously.
-2. Optionally, you can add an **Order ID** or **Purchase ID** for your own tracking purposes. There are no format requirements for these values. {possibly mention where one can view/sort/search those later? Autopilot uses them.}
+2. Optionally, you can add an **Order ID** or **Purchase ID** for your own tracking purposes. There are no format requirements for these values. {possibly mention where one can view/sort/search those later? Autopilot uses them.} {Let's stay silent on this for now.}
 3. Select **Register devices**.
 4. The system will add the devices to your list of devices on the Devices blade, marked as Registration Pending.
 5. Registration typically takes less than 10 minutes, and when successful the device will show as "Setup needed" meaning it's ready and waiting for an end-user to start using.
@@ -101,7 +103,7 @@ You can monitor the progress of device registration on the main **Microsoft Mana
 [//]: # (maybe better as a table so we can explain what the states mean)
 
 - Registration pending
-- Registration Failed (sub-list below)
+- Registration Failed: Export to see the full list of errors.
 - Setup Needed
 - Active
 - Inactive
@@ -120,7 +122,8 @@ You can monitor the progress of device registration on the main **Microsoft Mana
 ## Troubleshooting
 
 [//]: # (kinda depends on how much ends up being needed here. If very little, could go in the same section as table listing progress/outcomes. If more, its own section here. If a lot more, we can make a separate topic for it)
-[//]: # (I think the table above covers this pretty soundly.)
+
+
 
 ## Partner Process
 
