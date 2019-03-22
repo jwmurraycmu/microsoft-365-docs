@@ -129,72 +129,58 @@ You can monitor the progress of device registration on the main **Microsoft Mana
     <tr>
         <td>Error Code</td>
         <td>Reason</td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>InvalidZtdRequestBody = 801</td>
         <td>Rare occurrence. The request from portal was malformed or it didn’t include a tenantId.</td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>InvalidZtdHardwareHash = 802</td>
         <td>DDS send this error code ONLY when HW Hash provided is invalid</td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>MissingZtdSerialNumberAndProductKey = 803</td>
         <td>DDS send this error code ONLY when Serial number and Product Key Id provided by portal are Null or invalid</td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdDeviceAlreadyAssigned = 806</td>
         <td>DDS send this error code ONLY when Device is already registered to the same Tenant. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdDeviceIsNotRegistered = 807</td>
         <td>DDS send this error code ONLY when customer tried to configure or remove the device not under the customer Tenant. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdDeviceAssignedToOtherTenant = 808</td>
         <td>DDS send this error code ONLY when Device is already registered to another Tenant. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdProfileIsNotRegistered = 809</td>
         <td>DDS send this error code ONLY when portal tries to assign a profile which is not registered to Tenant. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdProfileAssignedToOtherTenant = 810</td>
         <td>DDS send this error code ONLY when portal trying to assign or update profile which is assigned to other Tenant. This shouldn’t happen ever. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdDeviceRegisteredByOtherTenant = 811</td>
         <td>DDS send this error code ONLY when a Tenant user tries to delete a device which was registered by a user with a different Tenant 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdDeviceNotFound = 812</td>
         <td>DDS send this error code when OEM Manufacturer, Model and Serial number provided by portal doesn’t find any corresponding HW hash. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdDeviceIsNotUnique = 813</td>
         <td>DDS send this error code ONLY when MSA cannot uniquely identify the device based on HW Hash. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>ZtdDeviceAlreadyAadRegistered = 814</td>
         <td>DDS sends this error when the device being registered has already been domain joined, the device object already exists in AAD and thus device precreation call from DDS to ADRS fails with DeviceAlreadyRegistered error. 	 </td>
-        <td>What to do</td>
     </tr>
     <tr>
         <td>HashNot4k</td>
         <td>tbd</td>
-        <td>What to do</td>
     </tr>
     </table>
 
