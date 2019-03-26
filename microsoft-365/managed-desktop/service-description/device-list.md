@@ -18,7 +18,7 @@ For more information on Microsoft Managed Desktop, see [Microsoft Managed Deskto
 <!-- Split from device & technologies topic. Destination topic for aka.ms/device-list  -->
 To be enrolled in Microsoft Managed Desktop a device must be one of the following models and meet or exceed the listed specifications for RAM, processor family, and disk space&#x00B9;. Other customizations are not supported. 
 
-Links to devices below are for reference only, purchases should be made through your commercial channel contacts to ensure the correct configurations are selected.
+Links to devices below are for reference only, purchases should be made through your commercial channel contacts to ensure the correct configurations are selected. 
 
 <table>
 <tr><th colspan="6">Microsoft Managed Desktop Devices</th></tr>
@@ -68,7 +68,7 @@ These resources can help answer questions that you might have about specific dev
 
 **Footnotes**
 
-&#x00B9; Additions can be made to this list at any time. Removals will be posted to this page 90 days prior to disallowing those devices from enrolling.
+&#x00B9; Additions can be made to this list at any time. Archived models eligible for enrollment, but subject to reduced MMD service life, can be found here.
 
 &#178; Archive date refers to the date on which these models will be subject to a shorter management period; any devices onboarded after this date will not receive a full three year ITaaS term. Retirement date refers to the date on which this model will no longer be supported by Microsoft Managed Desktop.
 
