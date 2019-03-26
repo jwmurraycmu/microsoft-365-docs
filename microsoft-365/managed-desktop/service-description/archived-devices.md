@@ -10,6 +10,7 @@ ms.date: 03/26/2019
 
 # Microsoft Managed Desktop archived devices
 
+>[!TIP]
 >Looking for the list of devices currently recommended for Microsoft Managed Desktop? Click [here](.\device-list.md).
 
 Below is a list of devices which will receive reduced service life from Microsoft Managed Desktop, but are still allowed for enrollment. The allowance for these devices is intended to help make it easier for you to get started with Microsoft Managed Desktop by leveraging devices you may have purchased previously. If you are purchasing new devices, you should procure from the [list of active devices](.\device-list.md).
