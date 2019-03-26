@@ -68,7 +68,7 @@ These resources can help answer questions that you might have about specific dev
 
 **Footnotes**
 
-&#x00B9; Additions can be made to this list at any time. Archived models eligible for enrollment, but subject to reduced MMD service life, can be found here.
+&#x00B9; Additions can be made to this list at any time. Archived models eligible for enrollment, but subject to reduced MMD service life, can be found on the [Archived Devices list](archived-devices.md).
 
 &#178; Archive date refers to the date on which these models will be subject to a shorter management period; any devices onboarded after this date will not receive a full three year ITaaS term. Retirement date refers to the date on which this model will no longer be supported by Microsoft Managed Desktop.
 
