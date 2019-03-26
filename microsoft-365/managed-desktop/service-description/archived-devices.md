@@ -24,9 +24,9 @@ Links to devices below are for reference only, purchases should be made through 
 
 <table>
 <tr><th colspan="6">Microsoft Managed Desktop Archived Devices</th></tr>
-<tr><th>Model</th><th>Minimum Specs</th><th>Additional Requirements</th><th>Retirement Date&#178;</th><th>Remaining Life&#178;</th></tr>
-<tr><td><a href="https://www.microsoft.com/en-us/p/surface-laptop-1st-gen-for-business/8w36k32zm453/g4vs?cid=msft_web_collection&CustomerIntent=Consumer&activetab=pivot%3aoverviewtab">Surface Laptop</a></td><td>256 GB / Intel i5 / 8 GB RAM</td><td>None</td><td>May 20, 2022</td><td>X Days</td></tr>
-<tr><td><a href="https://www.microsoft.com/en-us/p/surface-pro-5th-gen-for-business/907tds4dgwwv/kkzn?cid=msft_web_collection&CustomerIntent=Consumer">Surface Pro (5th Gen)</a></td><td> 256 GB / Intel i5 / 8 GB RAM</td><td>None</td><td>Jun 15, 2022</td><td>Y Days</td></tr>
+<tr><th>Model</th><th>Minimum Specs</th><th>Additional Requirements</th><th>Retirement Date&#x00B9;</th></tr>
+<tr><td><a href="https://www.microsoft.com/en-us/p/surface-laptop-1st-gen-for-business/8w36k32zm453/g4vs?cid=msft_web_collection&CustomerIntent=Consumer&activetab=pivot%3aoverviewtab">Surface Laptop</a></td><td>256 GB / Intel i5 / 8 GB RAM</td><td>None</td><td>May 20, 2022</td></tr>
+<tr><td><a href="https://www.microsoft.com/en-us/p/surface-pro-5th-gen-for-business/907tds4dgwwv/kkzn?cid=msft_web_collection&CustomerIntent=Consumer">Surface Pro (5th Gen)</a></td><td> 256 GB / Intel i5 / 8 GB RAM</td><td>None</td><td>Jun 15, 2022</td></tr>
 </table>
 
 In addition, the device must also:     
@@ -49,5 +49,5 @@ These resources can help answer questions that you might have about specific dev
 
 **Footnotes**
 
-&#178; Archive date refers to the date on which these models will be subject to a shorter management period; any devices onboarded after this date will not receive a full three year ITaaS term. Retirement date refers to the date on which this model will no longer be supported by Microsoft Managed Desktop.
+&#x00B9; Retirement date refers to the date on which this model will no longer be supported by Microsoft Managed Desktop. All remaining enrolled devices of this model will be removed from MMD Management, regardless of their enrollment date. 
 
