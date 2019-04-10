@@ -26,7 +26,7 @@ Whether you're working with completely new devices or re-using existing ones, to
 [//]: # (Pretty different - the fields for Manufacturer, Model, and Serial have to be EXACT matches, and Hardware Hash is not required at all.)
 
 These values are used for display purposes, and don't need to match properties from the device exactly.
-- Device manufacturer (example: Microsoft)
+- Device manufacturer (example: Microsoft) 
 - Device model (example: Surface Laptop)
 - Device serial number
 
@@ -48,27 +48,27 @@ These steps can also be done on a brand new device before going through OOBE for
 4. Turn on the target device, and do not progress OOBE.
     >Failure to do so will result in needing to reset or reimage the device.
 5. Insert the USB
-6. Hit Shift+F10
+6. Hit Shift+F10 
 7. type powershell
 8. cd <pathToUsb>
 9. Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 10. .\Get-WindowsAutoPilotInfo -OutputFile <path>\hardwarehash.csv
 11. shutdown -s -t 0
 
->Do not power on the target device again until Registration is complete.
+>Do not power on the target device again until Registration is complete. 
 
 >[!NOTE]
 >For your convenience, you can download a template for this CSV file from {deeplink into product}.
 
-Your file needs to include the **exact same column headings** as the sample one (Manufacturer, Model, etc.), but your own data for the other rows. If you use the template, open it in a text editing tool such as Notepad, and consider leaving all the data in row 1 alone, only entering data in rows 2 and below.
-
+Your file needs to include the **exact same column headings** as the sample one (Manufacturer, Model, etc.), but your own data for the other rows. If you use the template, open it in a text editing tool such as Notepad, and consider leaving all the data in row 1 alone, only entering data in rows 2 and below. 
+    
   ```
  Manufacturer,Model,Serial Number,Hardware Hash
   Microsoft Corporation,Surface Laptop,016520771357,eidkaofjeioaofjfoieoajfoiejofiaoiojeifjojew
-
-
+  
+  
   ```
->Failure to change any the sample data will result in your registration being rejected.
+>Failure to change any the sample data will result in your registration being rejected.   
 
 [//]: # (do the devices themselves need any kind of prep or settings? Firewall things? Diag data turned on? Or do they only need to be powered on and on the network? Any other network settings, domain, NAT, or whatever?)
 [//]: # (Nope! We make it easy.)
@@ -111,11 +111,11 @@ You can monitor the progress of device registration on the main **Microsoft Mana
 
 ## Register devices by using an API
 
-{what it's good for - more for repeatability/flexibility rather than # of devices} - This is a great way of phrasing it. It helps if you have to complete many separate registrations, but if you just do one big batch of 10,000, the UI is just as good. It's really meant for automation and Partners than for Customers.
+{what it's good for - more for repeatability/flexibility rather than # of devices} - This is a great way of phrasing it. It helps if you have to complete many separate registrations, but if you just do one big batch of 10,000, the UI is just as good. It's really meant for automation and Partners than for Customers. 
 
-{what language or framework or whatever is it?} - It's a REST API, and we have a C# sample app to help them get started.
+{what language or framework or whatever is it?} - It's a REST API, and we have a C# sample app to help them get started. 
 
-{where to obtain} - We decided to self-publish as an Alpha release. This should read something like "ask for help from your microsoft contract to get added to the preview.".
+{where to obtain} - We decided to self-publish as an Alpha release. This should read something like "ask for help from your microsoft contract to get added to the preview.". 
 
 
 
@@ -123,26 +123,50 @@ You can monitor the progress of device registration on the main **Microsoft Mana
 
 [//]: # (kinda depends on how much ends up being needed here. If very little, could go in the same section as table listing progress/outcomes. If more, its own section here. If a lot more, we can make a separate topic for it)
 
-| Error Message   | Details  |
-|    ---        |   ---  |
-| Unexpected Error | Your request could not be automatically processed. Please contact Support <link to Ops page> and provide the Request ID from your error export.|
-| Hardware hash not valid | The hardware hash you provided for this device was not formatted correctly. Please verify the hardware hash <link to docs> and resubmit. |
-| Device already registered  | This device is already registered to your organization. No further action required.  |
-| Device not found  | We couldn’t register this device because we could not find a match for the provided manufacturer, model, or serial number. Confirm these values with your device supplier.  |
-| Device not found | We couldn’t de-register this device because it does not exist in your organization. No further action required.   |
-| Device claimed by another organization | This device has already been claimed by another organization. Check with your device supplier. |
+[//]: # (James and Jose are working on changing the Error Codes to be better.)
+
+<table>
+    <tr>
+        <td>Error Message</td>
+        <td>Details</td>
+    </tr>
+    <tr>
+        <td>Unexpected Error</td>
+        <td>Your request could not be automatically processed. Please contact Support <link to Ops page> and provide the Request ID from your error export.</td>
+    </tr>
+    <tr>
+        <td>Invalid Hardware Hash</td>
+        <td>The hardware hash you provided for this device was incorrectly formatted. Please verify the hardware hash <link to docs> and resubmit. </td>
+    </tr>
+    <tr>
+        <td>Device already registered</td>
+        <td>This device is already registered to your company. No further action required.</td>
+    </tr>
+    <tr>
+        <td>Device not found</td>
+        <td>We couldn’t deregister this device because it does not exist in your company. No further action required. </td>
+    </tr>
+    <tr>
+        <td>Device claimed by another company</td>
+        <td>This device has already been claimed by another company. Please check with your device supplier. </td>
+    </tr>
+    <tr>
+        <td>Device not found</td>
+        <td>We couldn’t register this device because we could not find a match for the provided Manufacturer, Model, and Serial Number. Please confirm the values with your device supplier.</td>
+    </tr>
+    </table>
 
 
 ## Partner Process
 
-### Preparing for Registration
+### Preparing for Registration 
 Before completing registration for a customer, you must first establish a relationship with them on Partner Center [Partner Center LINK].
 
 To complete registration for your customer, you must create a CSV file.
 >Note: This format is for Partners only. Customers have a different format for self-service documented [Somewhere else LINK].
 
 >[!Important]These values must match the manufacturer values from SMBIOS exactly
-- Device manufacturer (example: Microsoft)
+- Device manufacturer (example: Microsoft) 
 - Device model (example: Surface Laptop)
 - Device serial number
 
@@ -157,4 +181,4 @@ Registering by the UI is the same as for self-service, except getting to the por
 7. click Devices and it's the same from here.
 
 ## Register devices by using an API
-Registering by API is the same as self-service, except that the Hardware Hash property of the Device collection is optional as described in the CSV section.
+Registering by API is the same as self-service, except that the Hardware Hash property of the Device collection is optional as described in the CSV section. 
