@@ -136,16 +136,15 @@ If device registration is something you anticipate having to do frequently or au
 
 [//]: # (kinda depends on how much ends up being needed here. If very little, could go in the same section as table listing progress/outcomes. If more, its own section here. If a lot more, we can make a separate topic for it)
 
-[//]: # (James and Jose are working on changing the Error Codes to be better.)
-
-| Error | Details |
-|----------------------|---------------------|
-| Unexpected Error |Your request could not be automatically processed. Contact Support [link to Ops page] and provide the Request ID from your error export. |
-| Invalid Hardware Hash | The hardware hash you provided for this device was not formatted correctly. Double-check the hardware hash (see [Prepare to register devices](#prepare-to-register-devices)) and then resubmit. |
-|Device already registered |This device is already registered to your company. No further action required. |
-| Device not found |We couldn’t de-register this device because it does not exist in your company. No further action required. |
-| Device claimed by another company | This device has already been claimed by another company. Check with your device supplier. |
+| Error Message | Details |
+| ---  | ---  |
+| Unexpected Error | Your request could not be automatically processed. File a Support Request [link to Ops page] and provide the Request ID from your error export. |
+| Hardware hash not valid | The hardware hash you provided for this device was not formatted correctly. Double-check the hardware hash (see [Prepare to register devices](#prepare-to-register-devices)) and then resubmit. |
+| Device already registered | This device is already registered to your organization. No further action required. |
 | Device not found | We couldn’t register this device because we could not find a match for the provided manufacturer, model, or serial number. Confirm these values with your device supplier. |
+| Device not found | We couldn’t de-register this device because it does not exist in your organization. No further action required. |
+| Device claimed by another organization | This device has already been claimed by another organization. Check with your device supplier. |
+
 
 [//]: # (A few notes/questions: we can't use HTML tables. We don't say "please" except in very particular circumstances. Would it be possible to change "Invalid hardware hash" to "Hardware hash not valid"? [we avoid "invalid"]. Earlier we heavily implied that the man./model didn't have to match exactly, but here it seems it'll throw an error if not...so what's the story there? Is "de-register" a typo--i.e., should it be "register?" Or is there some kind of de-registration action that we just haven't discussed yet? Oh, do we explain anywhere how to export errors, since we ask for that in the first row of the table?)
 
